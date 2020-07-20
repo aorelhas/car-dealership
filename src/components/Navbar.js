@@ -27,22 +27,22 @@ export const Navbar = () => {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Features
+                Stock
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Pricing
+                Empresa
               </a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
+              <a class="nav-link" href="#">
+                Retomas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Contactos
               </a>
             </li>
           </ul>
