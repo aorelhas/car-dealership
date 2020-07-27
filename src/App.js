@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
+
 import { Navbar } from './components/Navbar';
-import { FeaturedCar } from './components/FeaturedCar';
 import { Home } from './pages/Home';
-import { Services } from './components/Services';
-import { Location } from './components/Location';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Home />
-      <Services />
-      <FeaturedCar />
-      <Location />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
     </>
   );
 };

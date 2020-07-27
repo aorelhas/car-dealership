@@ -1,53 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
+  const [open, setOpen] = useState({ open: false });
+
+  const openBar = () => {
+    setOpen({ open: true });
+  };
+
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Stock
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Empresa
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Retomas
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contactos
-              </a>
-            </li>
-          </ul>
+    <nav className="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          {/* <Link to="/">
+          <img src={logo} alt="Resort" />
+        </Link> */}
+          <button
+            type="button "
+            className="nav-btn"
+            onChange={(e) => openBar(e)}
+          >
+            {/* <FaAlignRight className="nav-icon" /> */}
+          </button>
         </div>
-      </nav>
-    </div>
+        <ul className={open ? 'nav-links show-nav' : 'nav-links'}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/stock">Stock</Link>
+          </li>
+          <li>
+            <Link to="/company">Empresa</Link>
+          </li>
+          <li>
+            <Link to="/retomas">Retomas</Link>
+          </li>
+          <li>
+            <Link to="/Contactos">Contactos</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
