@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.svg';
 
 export const Navbar = () => {
   const [open, setOpen] = useState({ open: false });
@@ -12,9 +13,9 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          {/* <Link to="/">
-          <img src={logo} alt="Resort" />
-        </Link> */}
+          <Link to="/">
+            <img src={logo} alt="Resort" />
+          </Link>
           <button
             type="button "
             className="nav-btn"
