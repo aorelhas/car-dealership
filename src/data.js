@@ -14,6 +14,8 @@ export default [
       fuel: 'diesel',
       clutch: 'auto',
       size: 200,
+      garantia: '12 meses',
+      origem: 'nacional',
       capacity: 1,
       pets: false,
       breakfast: false,
