@@ -9,6 +9,8 @@ export default [
       name: 'single economy',
       slug: 'single-economy',
       type: 'single',
+      registo: '2017/123',
+      registos: 1,
       price: 100,
       km: 300,
       fuel: 'diesel',
