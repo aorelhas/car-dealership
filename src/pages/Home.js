@@ -9,8 +9,8 @@ export const Home = () => {
     <>
       <Hero>
         <Services />
-        {/* <FeaturedCar />
-        <Location /> */}
+        <FeaturedCar />
+        {/* <Location /> */}
       </Hero>
     </>
   );
