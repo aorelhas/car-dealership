@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const FeaturedCar = () => {
-  return (
-    <div>
-      <h1>Featured Car</h1>
-    </div>
-  );
-};
+export default class FeaturedCar extends Component {
+  // static contextType = RoomContext;
+
+  render() {
+    // let { loading, featuredRooms: rooms } = this.context;
+
+    // rooms = rooms.map((room) => {
+    //   return <Room key={room.id} room={room} />;
+    // });
+
+    return (
+      <section className="featured-rooms">
+        {/* <Title title="featured rooms" /> */}
+        <div className="featured-rooms-center">
+          {/* {loading ? <Loading /> : rooms} */}
+        </div>
+      </section>
+    );
+  }
+}
